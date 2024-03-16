@@ -1,5 +1,5 @@
-# Write your MySQL query statement below
-DELETE p1 
-From Person p1 
-join Person p2 ON p1.email = p2.email 
-where p1.id > p2.id
+-- Write your PostgreSQL query statement below
+DELETE FROM
+  Person personA USING Person personB
+WHERE
+  personA.id > personB.id AND personA.email = personB.email;
